@@ -17,7 +17,7 @@ $(document).ready(function(){
 
   startGame();
 
-  $(".new-game").click(startGame);
+  $(".new-game").click(function(){location.reload});
 
   $(".chosen").click(function(e){
     e.preventDefault;
