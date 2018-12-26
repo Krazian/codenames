@@ -1,0 +1,47 @@
+.center{
+  text-align: center;
+}
+
+.chosen{cursor: not-allowed !important;}
+.chosen-card{cursor: not-allowed !important; background-color: #d3d3d3 !important;}
+.red{background-color: #C23624 !important; color:white;}
+.blue{background-color: #4780AA !important; color:white;}
+.civilian{background-color: #D4C7B9 !important; color:white;}
+.spy{background-color: #282925 !important; color:white;}
+.cards{
+  border: solid 1px grey;
+  border-radius: 10px;
+  cursor: pointer;
+  display: inline-block;
+  height: 100px;
+  margin:5px;
+  padding-top:3.5%;
+  text-transform: uppercase;
+}
+#color-chooser, .cards:hover{
+  background-color: #d3d3d3;
+}
+
+#color-chooser{
+  background-color:white;
+  border: solid 1px black;
+  display: none;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+
+.color-block{
+  border-radius: 50px;
+  cursor: pointer;
+  height: 25px;
+  margin:0 auto;
+  width: 25px;
+}
+
+#time{
+  font-size: 9em;
+  font-weight:bold;
+  text-align: center;
+  width: 100%;
+}
