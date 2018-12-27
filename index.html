@@ -13,6 +13,35 @@
   <script src="scripts/script.js"></script>
 </head>
 <body>
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">How to Use</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <ol>
+            <li>Spymasters can use the key card OR the official <strong><em>Codename Gadget</em></strong> app to determine:</li>
+            <ul>
+              <li>Who goes first.</li>
+              <li>Where the red, blue, civilian, and assassin cards are.</li>
+            </ul>
+            <li>Click "New Game" to reset the board.</li>
+            <li>When players choose a card/word, spymasters click the word and choose the corresponding color that appears on the key.</li>
+            <li>If teams are taking too long to make a guess, click "Start Timer" to give them a 30 second countdown.</li>
+            <li>Click "Reset Timer" to cancel a countdown and set the timer back to 30 seconds.</li>
+            <li>Have fun!</li>
+          </ol>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <div id="color-chooser">
     <div class="row">
       <div class="color-block red center">R</div>
@@ -28,6 +57,7 @@
           <div class="new-game col-12 btn btn-success" style="margin: 5px auto;">NEW GAME</div>
           <div class="start-time col-12 btn btn-warning" style="margin: 5px auto;">START TIMER</div>
           <div class="reset-time col-12 btn btn-danger" style="margin: 5px auto;">RESET TIMER</div>
+          <div class="col-12 btn btn-info" data-toggle="modal" data-target="#myModal">HELP</div>
           <div id="time">30</div>
         </div>
       </div>
