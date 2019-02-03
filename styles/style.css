@@ -2,8 +2,8 @@
   text-align: center;
 }
 
-.chosen{cursor: not-allowed !important;}
-.chosen-card{cursor: not-allowed !important; background-color: #d3d3d3 !important;}
+/* .chosen{cursor: not-allowed !important;} */
+.chosen-card{/*cursor: not-allowed !important;*/ background-color: #d3d3d3 !important;}
 .red{background-color: #C23624 !important; color:white;}
 .blue{background-color: #4780AA !important; color:white;}
 .civilian{background-color: #D4C7B9 !important; color:white;}
@@ -30,7 +30,19 @@
   width: 200px;
   z-index: 2;
 }
-
+.close-color{
+  background-color: black;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+  font-size: 10px;
+  padding: 3px;
+  position: absolute;
+  right: -11px;
+  text-align: center;
+  top: -16px;
+  width: 20px;
+}
 .color-block{
   border-radius: 50px;
   cursor: pointer;

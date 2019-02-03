@@ -24,9 +24,9 @@ $(document).ready(function(){
   });
 
   $(".cards").click(function(){
-    if ($(this).attr("class").includes("chosen")){
-      console.log("This card has already been flipped.");
-    } else {
+    // if ($(this).attr("class").includes("chosen")){
+    //   console.log("This card has already been flipped.");
+    // } else {
       $(".chosen-card").removeClass("chosen-card");
       $(this).addClass("chosen-card");
       selectedCard = $(this);
@@ -37,12 +37,16 @@ $(document).ready(function(){
       
       $("#color-chooser").css("left", x+"px");
       $("#color-chooser").css("top", y+"px");
-    };
+    // };
   });
 
   $(".color-block").click(function(){
     $("#color-chooser").hide();
-    selectedCard.addClass($(this).attr("class").split(" ")[1]).addClass("chosen")
+    selectedCard.addClass($(this).attr("class").split(" ")[1]).addClass("chosen");
+  });
+  $(".close-color").click(function(){
+    $("#color-chooser").hide();
+    $(".chosen-card").removeClass("chosen-card");
   });
 
   let timerRunning = false;
