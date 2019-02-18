@@ -11,7 +11,7 @@ $(document).ready(function(){
       }
     };
     for(let i = 0; i < 25; i++){
-      $(".cards")[i].innerHTML = chosenWords[i];
+      $(".cards")[i].innerHTML = "<strong>"+chosenWords[i]+"</strong>";
     };
   };
 
@@ -54,6 +54,7 @@ $(document).ready(function(){
   $(".start-time").click(function(){
     if (!timerRunning){
       timerRunning = true;
+      $("#time").html(30);
       countdown = setInterval(function() {
         if (parseInt($("#time").html()) > 0){
           $("#time").html( parseInt($("#time").html()) - 1);
@@ -64,6 +65,6 @@ $(document).ready(function(){
   $(".reset-time").click(function(){
     clearInterval(countdown);
     timerRunning = false;
-    $("#time").html(30);
+    $("#time").html("--");
   });
 });
