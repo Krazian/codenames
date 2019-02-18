@@ -42,7 +42,7 @@ $(document).ready(function(){
 
   $(".color-block").click(function(){
     $("#color-chooser").hide();
-    selectedCard.addClass($(this).attr("class").split(" ")[1]).addClass("chosen");
+    selectedCard.removeClass("spy").removeClass("red").removeClass("blue").removeClass("civilian").addClass($(this).attr("class").split(" ")[1]).addClass("chosen");
   });
   $(".close-color").click(function(){
     $("#color-chooser").hide();
