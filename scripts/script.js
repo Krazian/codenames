@@ -62,6 +62,7 @@ $(document).ready(function(){
         if (parseInt($("#time").html()) <= 10){
           $("#time").css("color","#dc3545");
         };
+        if (parseInt($("#time").html()) === 0){$(".reset-time").click();};
       },1000);
     }
   });
