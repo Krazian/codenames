@@ -5,12 +5,12 @@ $(document).ready(function(){
     let selectedCard, countdown = null;
     let chosenWords = [];
     while (chosenWords.length < 25){
-      let index = Math.floor(Math.random() * words.length-1)
-      if(chosenWords.indexOf(words[index]) === -1){
+      let index = Math.floor(Math.random() * words.length)
+      if(!chosenWords.includes(words[index])){
         chosenWords.push(words[index])
       }
     };
-    for(let i = 0; i < 25; i++){
+    for(let i = 0; i < $(".cards").length ; i++){
       $(".cards")[i].innerHTML = "<strong>"+chosenWords[i]+"</strong>";
     };
   };
@@ -24,9 +24,6 @@ $(document).ready(function(){
   });
 
   $(".cards").click(function(){
-    // if ($(this).attr("class").includes("chosen")){
-    //   console.log("This card has already been flipped.");
-    // } else {
       $(".chosen-card").removeClass("chosen-card");
       $(this).addClass("chosen-card");
       selectedCard = $(this);
@@ -44,6 +41,7 @@ $(document).ready(function(){
     $("#color-chooser").hide();
     selectedCard.removeClass("spy").removeClass("red").removeClass("blue").removeClass("civilian").addClass($(this).attr("class").split(" ")[1]).addClass("chosen");
   });
+  
   $(".close-color").click(function(){
     $("#color-chooser").hide();
     $(".chosen-card").removeClass("chosen-card");
