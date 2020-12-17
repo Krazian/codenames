@@ -59,12 +59,15 @@ $(document).ready(function(){
         if (parseInt($("#time").html()) > 0){
           $("#time").html( parseInt($("#time").html()) - 1);
         };
+        if (parseInt($("#time").html()) <= 10){
+          $("#time").css("color","#dc3545");
+        };
       },1000);
     }
   });
   $(".reset-time").click(function(){
     clearInterval(countdown);
     timerRunning = false;
-    $("#time").html("--");
+    $("#time").html("--").css("color","black");
   });
 });
