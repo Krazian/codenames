@@ -56,13 +56,13 @@ $(document).ready(function(){
       timerRunning = true;
       $("#time").html(30);
       countdown = setInterval(function() {
-        if (parseInt($("#time").html()) > 0){
+        if (parseInt($("#time").html()) >= 0){
           $("#time").html( parseInt($("#time").html()) - 1);
         };
         if (parseInt($("#time").html()) <= 10){
           $("#time").css("color","#dc3545");
         };
-        if (parseInt($("#time").html()) === 0){$(".reset-time").click();};
+        if (parseInt($("#time").html()) === -1){$(".reset-time").click();};
       },1000);
     }
   });
